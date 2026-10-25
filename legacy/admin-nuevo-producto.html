@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Producto - Admin</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div style="display: flex; min-height: 100vh;">
+        <aside style="width: 250px; background-color: #2c3e50; color: white; padding: 20px;">
+            <h2>Sonido Vivo Admin</h2>
+            <nav style="display: flex; flex-direction: column; gap: 15px; margin-top: 30px;">
+                <a href="admin-home.html" style="color: white; text-decoration: none;">📊 Dashboard</a>
+                <a href="admin-usuarios.html" style="color: white; text-decoration: none;">👥 Usuarios</a>
+                <a href="admin-nuevo-usuario.html" style="color: white; text-decoration: none;">➕ Nuevo Usuario</a>
+                <a href="admin-nuevo-producto.html" style="color: white; text-decoration: none;">📦 Nuevo Producto</a>
+                <hr>
+                <a href="index.html" style="color: #e74c3c; text-decoration: none;">🚪 Volver a la Tienda</a>
+            </nav>
+        </aside>
+
+        <main style="flex: 1; padding: 40px; background-color: #f4f6f7;">
+            <h2>NUEVO PRODUCTO</h2>
+            <form id="form-admin-producto" style="background: white; padding: 25px; border-radius: 8px; max-width: 600px;">
+                <label>Código del Producto (Min. 3 caracteres):</label>
+                <input type="text" id="prod-codigo" minlength="3" required style="width: 100%; margin-bottom: 15px; padding: 8px;">
+
+                <label>Nombre del Producto:</label>
+                <input type="text" id="prod-nombre" maxlength="100" required style="width: 100%; margin-bottom: 15px; padding: 8px;">
+
+                <label>Descripción:</label>
+                <textarea id="prod-descripcion" maxlength="500" style="width: 100%; margin-bottom: 15px; padding: 8px;"></textarea>
+
+                <label>Precio ($):</label>
+                <input type="number" id="prod-precio" min="0" step="0.01" required style="width: 100%; margin-bottom: 15px; padding: 8px;">
+
+                <label>Stock Inicial:</label>
+                <input type="number" id="prod-stock" min="0" required style="width: 100%; margin-bottom: 15px; padding: 8px;">
+
+                <label>Stock Crítico (Alerta de reposición):</label>
+                <input type="number" id="prod-stock-critico" min="0" style="width: 100%; margin-bottom: 15px; padding: 8px;">
+
+                <label>Categoría:</label>
+                <select id="prod-categoria" required style="width: 100%; margin-bottom: 15px; padding: 8px;">
+                    <option value="">-- Seleccionar Categoría --</option>
+                    <option value="Cuerdas">Instrumentos de Cuerda</option>
+                    <option value="Percusion">Percusión</option>
+                    <option value="Amplificadores">Amplificadores</option>
+                    <option value="Accesorios">Accesorios</option>
+                </select>
+
+                <button type="submit" style="background: #2980b9; color: white; border: none; padding: 10px 20px; cursor: pointer;">Guardar Producto</button>
+            </form>
+        </main>
+    </div>
+    <script src="validaciones.js"></script>
+</body>
+</html>

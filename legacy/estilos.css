@@ -1,0 +1,1041 @@
+/* =====================================================
+   SONIDO VIVO - ESTILOS GENERALES
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f8fc;
+    color: #1d2b3a;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 5%;
+    background: #ffffff;
+    border-bottom: 1px solid #dce6f0;
+    box-shadow: 0 3px 15px rgba(13, 71, 161, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+    color: #0d47a1;
+    white-space: nowrap;
+}
+
+header h1 {
+    color: #0d47a1;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav a {
+    margin: 0 5px;
+    padding: 9px 12px;
+    text-decoration: none;
+    color: #26384a;
+    font-weight: 600;
+    border-radius: 7px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background: #1565c0;
+}
+
+nav a.activo {
+    color: #ffffff;
+    background: #0d47a1;
+    font-weight: 700;
+}
+
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.acciones a {
+    text-decoration: none;
+    padding: 9px 15px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.acciones a:first-child {
+    color: #0d47a1;
+    border: 1px solid #0d47a1;
+}
+
+.acciones a:first-child:hover {
+    background: #0d47a1;
+    color: white;
+}
+
+.acciones a:last-child {
+    color: white;
+    background: #1565c0;
+}
+
+.acciones a:last-child:hover {
+    background: #0d47a1;
+}
+
+
+/* =====================================================
+   BANNER PRINCIPAL
+===================================================== */
+
+.banner-principal {
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 70px 7%;
+    background: linear-gradient(
+        135deg,
+        #071d3a,
+        #0d47a1,
+        #1976d2
+    );
+    color: white;
+}
+
+.texto-banner {
+    width: 48%;
+}
+
+.texto-banner h2 {
+    font-size: 48px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.texto-banner p {
+    font-size: 19px;
+    margin-bottom: 30px;
+    line-height: 1.7;
+    color: #e3f2fd;
+}
+
+.texto-banner button,
+.btn-principal {
+    display: inline-block;
+    padding: 14px 27px;
+    background: #ffffff;
+    color: #0d47a1;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.texto-banner button:hover,
+.btn-principal:hover {
+    transform: translateY(-3px);
+    background: #e3f2fd;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.imagen-banner {
+    width: 48%;
+}
+
+.imagen-banner img {
+    display: block;
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =====================================================
+   LISTADO PRODUCTOS - INICIO
+===================================================== */
+
+.listado-productos {
+    padding: 70px 6%;
+    background: #f4f8fc;
+}
+
+.listado-productos h3 {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 45px;
+    color: #0d47a1;
+}
+
+.grilla-productos {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.producto {
+    background: white;
+    border: none;
+    border-radius: 15px;
+    padding: 0 0 22px;
+    text-align: left;
+    width: auto;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(13, 71, 161, 0.10);
+    transition: all 0.3s ease;
+    /* Agrega estas 3 líneas para alinear los botones */
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+}
+
+.producto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 30px rgba(13, 71, 161, 0.18);
+}
+
+.producto img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+    background: #ffffff;
+    padding: 15px;
+    margin-bottom: 0;
+}
+
+.producto h4 {
+    padding: 18px 20px 5px;
+    font-size: 19px;
+    color: #1d2b3a;
+}
+
+.producto .atributos {
+    padding: 0 20px;
+    font-size: 14px;
+    color: #68798a;
+    margin-bottom: 10px;
+    height: auto;
+}
+
+.producto .precio {
+    padding: 0 20px;
+    font-size: 24px;
+    font-weight: 800;
+    color: #0d47a1;
+    margin-bottom: 15px;
+}
+
+.producto .btn-agregar {
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    /* Esta línea empuja el botón siempre hacia abajo */
+    margin-top: auto; 
+}
+
+/* =====================================================
+   PÁGINAS INTERNAS
+===================================================== */
+
+.titulo-pagina {
+    text-align: center;
+    padding: 70px 20px 45px;
+    background: linear-gradient(
+        135deg,
+        #eaf4ff,
+        #ffffff
+    );
+}
+
+.titulo-pagina h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+    color: #0d47a1;
+}
+
+.titulo-pagina p {
+    font-size: 18px;
+    color: #607080;
+}
+
+
+/* =====================================================
+   PRODUCTOS
+===================================================== */
+
+.productos-grid {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 70px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+}
+
+.productos-grid .producto {
+    padding: 0;
+}
+
+.productos-grid .producto img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background: white;
+    padding: 20px;
+}
+
+.producto-info {
+    padding: 22px;
+}
+
+.producto-info h2 {
+    font-size: 20px;
+    color: #172b3d;
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    color: #68798a;
+    line-height: 1.6;
+    min-height: 75px;
+}
+
+.productos-grid .precio {
+    padding: 0;
+    color: #0d47a1;
+    font-size: 25px;
+    font-weight: 800;
+    margin: 15px 0;
+}
+
+.btn-agregar {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 13px 15px;
+    background: #0d47a1;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-agregar:hover {
+    background: #1565c0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(13, 71, 161, 0.25);
+}
+
+
+/* =====================================================
+   NOSOTROS
+===================================================== */
+
+.nosotros-hero {
+    width: 90%;
+    max-width: 1200px;
+    margin: 55px auto;
+    background: white;
+    border-radius: 20px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    box-shadow: 0 8px 30px rgba(13, 71, 161, 0.10);
+}
+
+.nosotros-hero h1 {
+    color: #0d47a1;
+    font-size: 43px;
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.nosotros-hero p {
+    color: #596b7d;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.nosotros-hero img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: #1565c0;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+
+.nosotros-contenido {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 65px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.nosotros-contenido article {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 6px 22px rgba(13, 71, 161, 0.09);
+    border-top: 4px solid #1565c0;
+}
+
+.nosotros-contenido h2 {
+    color: #0d47a1;
+    margin-bottom: 15px;
+    font-size: 23px;
+}
+
+.nosotros-contenido p {
+    color: #5e7082;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   VIDEO
+===================================================== */
+
+.video-seccion {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto 75px;
+    text-align: center;
+}
+
+.video-seccion h2 {
+    color: #0d47a1;
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.video-seccion p {
+    color: #68798a;
+    margin-bottom: 28px;
+}
+
+.video {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
+    background: #071d3a;
+}
+
+.video iframe {
+    display: block;
+    width: 100%;
+    height: 500px;
+    border: none;
+}
+
+
+/* =====================================================
+   BLOG
+===================================================== */
+
+.blog-grid {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 75px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 17px;
+    overflow: hidden;
+    box-shadow: 0 7px 25px rgba(13, 71, 161, 0.10);
+    transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 32px rgba(13, 71, 161, 0.17);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.blog-card > div {
+    padding: 27px;
+}
+
+.categoria {
+    color: #1565c0;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.blog-card h2 {
+    color: #172b3d;
+    font-size: 22px;
+    line-height: 1.3;
+    margin: 12px 0;
+}
+
+.blog-card p {
+    color: #68798a;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.btn-secundario {
+    display: inline-block;
+    background: #0d47a1;
+    color: white;
+    padding: 11px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-secundario:hover {
+    background: #1565c0;
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   FORMULARIOS
+===================================================== */
+
+.contenedor-formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 20px;
+    background:
+        linear-gradient(
+            135deg,
+            #eaf4ff,
+            #f7fbff
+        );
+    min-height: 75vh;
+}
+
+.caja-registro {
+    background: white;
+    padding: 42px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(13, 71, 161, 0.13);
+    width: 100%;
+    max-width: 520px;
+}
+
+.caja-registro h1,
+.caja-registro h2 {
+    color: #0d47a1;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.caja-registro > p {
+    text-align: center;
+    color: #68798a;
+    margin-bottom: 30px;
+}
+
+.grupo-input {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.grupo-input label {
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #26384a;
+}
+
+.grupo-input input,
+.grupo-input select {
+    padding: 13px 14px;
+    border: 1px solid #ccd8e5;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    background: #fbfdff;
+    transition: 0.3s;
+}
+
+.grupo-input input:focus,
+.grupo-input select:focus {
+    border-color: #1565c0;
+    box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.10);
+    background: white;
+}
+
+.btn-formulario {
+    width: 100%;
+    padding: 15px;
+    background: #0d47a1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 800;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-formulario:hover {
+    background: #1565c0;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 15px rgba(13, 71, 161, 0.25);
+}
+
+.texto-formulario {
+    text-align: center;
+    margin-top: 22px;
+    color: #68798a;
+}
+
+.texto-formulario a,
+.enlace-alternativo a {
+    color: #0d47a1;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.texto-formulario a:hover,
+.enlace-alternativo a:hover {
+    text-decoration: underline;
+}
+
+.enlace-alternativo {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   MENSAJES DE ERROR
+===================================================== */
+
+.mensaje-error {
+    color: #d62828;
+    font-size: 13px;
+    margin-top: 6px;
+    display: block;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   ADMINISTRADOR
+===================================================== */
+
+.tabla-admin {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 7px 25px rgba(13, 71, 161, 0.10);
+}
+
+.tabla-admin th,
+.tabla-admin td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #e5edf5;
+}
+
+.tabla-admin th {
+    background: #0d47a1;
+    color: white;
+    font-weight: 700;
+}
+
+.tabla-admin tr:hover {
+    background: #f2f8ff;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 45px 6%;
+    background: #071d3a;
+    color: white;
+}
+
+footer h3 {
+    color: white;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+footer p {
+    color: #b9cce0;
+    margin-bottom: 7px;
+}
+
+footer a {
+    color: #cfe5ff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.newsletter {
+    display: flex;
+    align-items: center;
+}
+
+.newsletter input {
+    padding: 11px 13px;
+    border-radius: 7px;
+    border: none;
+    margin-right: 8px;
+    outline: none;
+}
+
+.newsletter button {
+    padding: 11px 17px;
+    background: #1565c0;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.newsletter button:hover {
+    background: #1976d2;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 25px;
+    margin-top: 15px;
+}
+
+
+/* =====================================================
+   RESPONSIVE - TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    header {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .grilla-productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nosotros-contenido {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE - CELULAR
+===================================================== */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 15px 20px;
+        justify-content: center;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    nav {
+        gap: 3px;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 7px;
+    }
+
+    .acciones {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .banner-principal {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 25px;
+    }
+
+    .texto-banner,
+    .imagen-banner {
+        width: 100%;
+    }
+
+    .texto-banner h2 {
+        font-size: 35px;
+    }
+
+    .texto-banner p {
+        font-size: 16px;
+    }
+
+    .grilla-productos {
+        grid-template-columns: 1fr;
+    }
+
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-pagina h1 {
+        font-size: 32px;
+    }
+
+    .nosotros-hero {
+        grid-template-columns: 1fr;
+        padding: 28px;
+        margin: 30px auto;
+    }
+
+    .nosotros-hero h1 {
+        font-size: 32px;
+    }
+
+    .nosotros-hero img {
+        height: 250px;
+    }
+
+    .nosotros-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .video iframe {
+        height: 280px;
+    }
+
+    .caja-registro {
+        padding: 28px 22px;
+    }
+
+    footer {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .newsletter {
+        width: 100%;
+        justify-content: center;
+    }
+
+}
+/* =====================================================
+   MÓDULO ADMINISTRADOR
+===================================================== */
+
+.admin-container {
+    display: flex;
+    min-height: 85vh;
+    background: #f4f6f7;
+}
+
+.sidebar {
+    width: 260px;
+    background: #071d3a;
+    color: white;
+    padding: 30px 20px;
+    flex-shrink: 0;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar nav a {
+    color: #b9cce0;
+    text-decoration: none;
+    padding: 11px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.activo {
+    background: #1565c0;
+    color: white;
+}
+
+.sidebar nav a.btn-salir {
+    color: #ff6b6b;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+}
+
+.admin-content {
+    flex: 1;
+    padding: 40px;
+}
+
+.admin-header-acciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+/* Botones de Acción dentro del Admin */
+.btn-crear {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #27ae60;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-crear:hover {
+    background: #219150;
+}
+
+.btn-editar, .btn-eliminar {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.btn-editar {
+    background: #f39c12;
+    color: white;
+}
+
+.btn-editar:hover {
+    background: #d68910;
+}
+
+.btn-eliminar {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn-eliminar:hover {
+    background: #c0392b;
+}
+
+/* Adaptación móvil del panel */
+@media (max-width: 900px) {
+    .admin-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+}

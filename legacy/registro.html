@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | Sonido Vivo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">🎵 Sonido Vivo</div>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="blogs.html">Blog</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="carrito.html">🛒 Carrito</a>
+    </nav>
+    <div class="acciones">
+        <a href="login.html">Iniciar sesión</a>
+        <a href="registro.html">Registrarse</a>
+    </div>
+</header>
+
+<main>
+    <section class="contenedor-formulario">
+        <div class="caja-registro">
+            <h1>Crear Cuenta</h1>
+            <p>Regístrate para comprar tus instrumentos favoritos.</p>
+
+            <form id="form-registro">
+                <!-- RUT -->
+                <div class="grupo-input">
+                    <label for="reg-run">RUN (Sin puntos ni guion)</label>
+                    <input type="text" id="reg-run" placeholder="Ej: 19011022K" maxlength="9" required>
+                    <span id="error-run" class="mensaje-error"></span>
+                </div>
+
+                <!-- CORREO -->
+                <div class="grupo-input">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" placeholder="ejemplo@gmail.com" required>
+                    <span id="error-correo" class="mensaje-error"></span>
+                </div>
+
+                <!-- CONTRASEÑA -->
+                <div class="grupo-input">
+                    <label for="reg-pass">Contraseña</label>
+                    <input type="password" id="reg-pass" placeholder="4 a 10 caracteres" minlength="4" maxlength="10" required>
+                    <span id="error-password" class="mensaje-error"></span>
+                </div>
+
+                <!-- CONFIRMAR CONTRASEÑA -->
+                <div class="grupo-input">
+                    <label for="reg-pass-confirm">Confirmar contraseña</label>
+                    <input type="password" id="reg-pass-confirm" placeholder="Repite tu contraseña" minlength="4" maxlength="10" required>
+                    <span id="error-confirmar-password" class="mensaje-error"></span>
+                </div>
+
+                <!-- REGIÓN -->
+                <div class="grupo-input">
+                    <label for="reg-region">Región</label>
+                    <select id="reg-region" required>
+                        <option value="">-- Selecciona una Región --</option>
+                        <option value="valparaiso">Región de Valparaíso</option>
+                        <option value="metropolitana">Región Metropolitana</option>
+                        <option value="biobio">Región del Biobío</option>
+                    </select>
+                </div>
+
+                <!-- COMUNA -->
+                <div class="grupo-input">
+                    <label for="reg-comuna">Comuna</label>
+                    <select id="reg-comuna" required>
+                        <option value="">-- Selecciona primero una Región --</option>
+                    </select>
+                </div>
+
+                <!-- BOTÓN -->
+                <button type="submit" class="btn-formulario">Crear Cuenta</button>
+
+                <p class="texto-formulario">
+                    ¿Ya tienes una cuenta? <a href="login.html">Inicia sesión</a>
+                </p>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div>
+        <h3>Sonido Vivo</h3>
+        <p>Tu tienda online de instrumentos musicales.</p>
+    </div>
+    <div>
+        <h3>Contacto</h3>
+        <p>contacto@sonidovivo.cl</p>
+        <p>Chile</p>
+    </div>
+    <div>
+        <h3>Enlaces</h3>
+        <a href="productos.html">Productos</a><br>
+        <a href="contacto.html">Contacto</a>
+    </div>
+    <p class="copyright">© 2026 Sonido Vivo</p>
+</footer>
+
+<script src="validaciones.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos - Sonido Vivo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <h1>Sonido Vivo</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="productos.html">Productos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="carrito.html">🛒 Carrito</a>
+        </nav>
+        <div class="acceso-usuarios">
+            <a href="login.html">Iniciar sesión</a> | 
+            <a href="registro.html">Registrar usuario</a>
+        </div>
+    </header>
+
+    <!-- MAIN: Catálogo completo -->
+    <main>
+        <section class="listado-productos">
+            <h3>Todo nuestro catálogo</h3>
+            
+            <div class="grilla-productos">
+                <!-- Producto 1 -->
+                <article class="producto">
+                    <img src="../public/img/guitarra.jpg" alt="Guitarra Eléctrica Fender">
+                    <h4>Guitarra Fender Stratocaster</h4>
+                    <p class="atributos">Acabado Sunburst - Cápsulas Single Coil</p>
+                    <p class="precio">$850.000</p>
+                    <button class="btn-agregar">Añadir al carrito</button>
+                </article>
+
+                <!-- Producto 2 -->
+                <article class="producto">
+                    <img src="../public/img/amplificador-15w.jpg" alt="Amplificador Cort 15W">
+                    <h4>Amplificador Cort 15W</h4>
+                    <p class="atributos">Ideal para práctica en casa</p>
+                    <p class="precio">$85.000</p>
+                    <button class="btn-agregar">Añadir al carrito</button>
+                </article>
+
+                <!-- Producto 3 -->
+                <article class="producto">
+                    <img src="../public/img/bateria.jpg" alt="Batería Acústica Dixon">
+                    <h4>Batería Acústica Dixon</h4>
+                    <p class="atributos">5 piezas - Incluye atriles</p>
+                    <p class="precio">$450.000</p>
+                    <button class="btn-agregar">Añadir al carrito</button>
+                </article>
+                
+                <!-- Producto 4 -->
+                <article class="producto">
+                    <img src="../public/img/pedal.jpg" alt="Pedal Boss DS-1">
+                    <h4>Pedal Boss Distortion DS-1</h4>
+                    <p class="atributos">Distorsión análoga - Naranjo</p>
+                    <p class="precio">$65.000</p>
+                    <button class="btn-agregar">Añadir al carrito</button>
+                </article>
+
+                <!-- Producto 5 (CORREGIDO) -->
+                <article class="producto">
+                    <img src="../public/img/bajo-fender.jpg" alt="Bajo Eléctrico Fender">
+                    <h4>Bajo Fender Precision</h4>
+                    <p class="atributos">4 Cuerdas - Color Negro</p>
+                    <p class="precio">$790.000</p>
+                    <button class="btn-agregar">Añadir al carrito</button>
+                </article>
+
+                <!-- Producto 6 (CORREGIDO) -->
+                <article class="producto">
+                    <img src="../public/img/amplificador-40.jpg" alt="Amplificador de Bajo">
+                    <h4>Amplificador Rumble 40W</h4>
+                    <p class="atributos">Para bajo eléctrico - Ecualizador</p>
+                    <p class="precio">$220.000</p>
+                    <button class="btn-agregar">Añadir al carrito</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-info">
+            <p><strong>Sonido Vivo - Viña del Mar</strong></p>
+        </div>
+    </footer>
+
+    <!-- AQUÍ VA EL SCRIPT: Siempre al final, justo antes del </body> -->
+    <script src="validaciones.js"></script>
+</body>
+</html>

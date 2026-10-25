@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra - Sonido Vivo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Sonido Vivo</h1>
+        </div>
+        <nav>
+            <div id="zona-login"></div>
+        </nav>
+    </header>
+
+    <main style="padding: 40px; max-width: 700px; margin: 0 auto;">
+
+        <h2>Finalizar Compra</h2>
+
+        <!-- RESUMEN DEL PEDIDO -->
+        <section style="background-color: #f1f1f1; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+            <h3>Resumen del pedido</h3>
+            <div id="resumen-pedido"></div>
+            <h3>Total a pagar: <span id="total-pago">$0</span></h3>
+        </section>
+
+        <!-- FORMULARIO DE PAGO -->
+        <form id="form-pago">
+
+            <h3>Datos de envío</h3>
+
+            <label for="pago-nombre">Nombre completo</label><br>
+            <input type="text" id="pago-nombre" placeholder="Nombre y apellido"><br>
+            <span id="error-pago-nombre" style="color: red; font-size: 0.85em;"></span><br><br>
+
+            <label for="pago-direccion">Dirección de envío</label><br>
+            <input type="text" id="pago-direccion" placeholder="Calle, número, comuna"><br>
+            <span id="error-pago-direccion" style="color: red; font-size: 0.85em;"></span><br><br>
+
+            <h3>Datos de la tarjeta (simulado)</h3>
+
+            <label for="pago-tarjeta">Número de tarjeta</label><br>
+            <input type="text" id="pago-tarjeta" placeholder="0000 0000 0000 0000" maxlength="19"><br>
+            <span id="error-pago-tarjeta" style="color: red; font-size: 0.85em;"></span><br><br>
+
+            <label for="pago-fecha">Fecha de expiración (MM/AA)</label><br>
+            <input type="text" id="pago-fecha" placeholder="08/27" maxlength="5"><br>
+            <span id="error-pago-fecha" style="color: red; font-size: 0.85em;"></span><br><br>
+
+            <label for="pago-cvv">CVV</label><br>
+            <input type="text" id="pago-cvv" placeholder="123" maxlength="3"><br>
+            <span id="error-pago-cvv" style="color: red; font-size: 0.85em;"></span><br><br>
+
+            <button type="submit" style="background-color: #2a9d8f; padding: 10px 20px;">Pagar ahora</button>
+            <a href="carrito.html" style="margin-left: 15px;">Volver al carrito</a>
+
+        </form>
+
+    </main>
+
+    <script src="validaciones.js"></script>
+    <script src="sesion.js"></script>
+</body>
+</html>

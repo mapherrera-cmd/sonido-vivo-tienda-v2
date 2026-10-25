@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Sonido Vivo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- PROTECCIÓN DE ACCESO: si no hay sesión de admin, expulsa antes de mostrar nada -->
+    <script>
+        const usuarioSesion = JSON.parse(localStorage.getItem("usuarioActivo"));
+        if (!usuarioSesion || usuarioSesion.rol !== "admin") {
+            window.location.href = "login.html";
+        }
+    </script>
+
+    <!-- HEADER DEL ADMIN: Es distinto al de los clientes -->
+    <header style="background-color: #112233; color: white;">
+        <div class="logo">
+            <h1 style="color: white;">Sonido Vivo | ADMIN</h1>
+        </div>
+        <nav>
+            <a href="admin-productos.html" style="color: #a8dadc;">📦 Mis Productos</a>
+            <a href="admin-usuarios.html" style="color: white;">👥 Usuarios</a>
+            <a href="#" onclick="cerrarSesion()" style="color: #e63946;">Cerrar Sesión</a>
+        </nav>
+    </header>
+
+    <main style="padding: 40px;">
+        <h2 style="margin-bottom: 20px;">Listado de Productos en Bodega</h2>
+        
+        <button style="margin-bottom: 20px; background-color: #2a9d8f;">+ Agregar Nuevo Producto</button>
+
+        <!-- TABLA: Etiqueta semántica para mostrar datos tabulares -->
+        <table class="tabla-admin">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Imagen</th>
+                    <th>Nombre del Producto</th>
+                    <th>Precio</th>
+                    <th>Stock Físico</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td><img src="../public/img/guitarra.jpg" width="50" alt="Guitarra"></td>
+                    <td>Guitarra Fender Stratocaster</td>
+                    <td>$850.000</td>
+                    <td style="color: green; font-weight: bold;">12</td>
+                    <td>
+                        <button style="background-color: #f4a261; padding: 5px 10px;">Editar</button>
+                        <button style="background-color: #e63946; padding: 5px 10px;">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td><img src="../public/img/amplificador-15w.jpg" width="50" alt="Amplificador"></td>
+                    <td>Amplificador Cort 15W</td>
+                    <td>$85.000</td>
+                    <td style="color: red; font-weight: bold;">0 (Agotado)</td>
+                    <td>
+                        <button style="background-color: #f4a261; padding: 5px 10px;">Editar</button>
+                        <button style="background-color: #e63946; padding: 5px 10px;">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <script src="validaciones.js"></script>
+    <script src="sesion.js"></script>
+</body>
+</html>

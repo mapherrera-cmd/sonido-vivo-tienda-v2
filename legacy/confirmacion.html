@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra Confirmada - Sonido Vivo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Sonido Vivo</h1>
+        </div>
+        <nav>
+            <div id="zona-login"></div>
+        </nav>
+    </header>
+
+    <main style="padding: 40px; max-width: 700px; margin: 0 auto; text-align: center;">
+
+        <h2 style="color: #2a9d8f;">✅ ¡Compra realizada con éxito!</h2>
+
+        <div id="detalle-compra" style="background-color: #f1f1f1; padding: 20px; border-radius: 8px; margin-top: 30px; text-align: left;">
+            <!-- Se llena con JavaScript -->
+        </div>
+
+        <a href="productos.html" style="display: inline-block; margin-top: 30px; background-color: #2a9d8f; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">
+            Seguir comprando
+        </a>
+
+    </main>
+
+    <script src="validaciones.js"></script>
+    <script src="sesion.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const compra = JSON.parse(localStorage.getItem("ultimaCompra"));
+            const contenedor = document.getElementById("detalle-compra");
+
+            if (!compra) {
+                contenedor.innerHTML = "<p>No hay información de una compra reciente.</p>";
+                return;
+            }
+
+            let html =
+                "<p><strong>Número de orden:</strong> " + compra.numeroOrden + "</p>" +
+                "<p><strong>Fecha:</strong> " + compra.fecha + "</p>" +
+                "<p><strong>Nombre:</strong> " + compra.nombreCliente + "</p>" +
+                "<p><strong>Dirección de envío:</strong> " + compra.direccion + "</p>" +
+                "<hr>" +
+                "<p><strong>Productos:</strong></p>";
+
+            compra.productos.forEach(function (producto) {
+                html += "<p>" + producto.nombre + " x" + producto.cantidad + " - $" + (producto.precio * producto.cantidad) + "</p>";
+            });
+
+            html += "<hr><h3>Total pagado: $" + compra.total + "</h3>";
+
+            contenedor.innerHTML = html;
+
+        });
+    </script>
+
+</body>
+</html>

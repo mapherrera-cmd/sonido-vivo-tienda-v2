@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios - Admin</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div style="display: flex; min-height: 100vh;">
+        <aside style="width: 250px; background-color: #2c3e50; color: white; padding: 20px;">
+            <h2>Sonido Vivo Admin</h2>
+            <nav style="display: flex; flex-direction: column; gap: 15px; margin-top: 30px;">
+                <a href="admin-home.html" style="color: white; text-decoration: none;">📊 Dashboard</a>
+                <a href="admin-usuarios.html" style="color: white; text-decoration: none;">👥 Usuarios</a>
+                <a href="admin-nuevo-usuario.html" style="color: white; text-decoration: none;">➕ Nuevo Usuario</a>
+                <a href="admin-nuevo-producto.html" style="color: white; text-decoration: none;">📦 Nuevo Producto</a>
+                <hr>
+                <a href="index.html" style="color: #e74c3c; text-decoration: none;">🚪 Volver a la Tienda</a>
+            </nav>
+        </aside>
+
+        <main style="flex: 1; padding: 40px; background-color: #f4f6f7;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2>Usuarios Registrados</h2>
+                <a href="admin-nuevo-usuario.html" class="btn-agregar" style="padding: 10px 15px; text-decoration: none; background: #27ae60; color: white; border-radius: 4px;">Crear Usuario</a>
+            </div>
+
+            <table border="1" style="width: 100%; border-collapse: collapse; background: white; text-align: left;">
+                <thead style="background-color: #34495e; color: white;">
+                    <tr>
+                        <th style="padding: 10px;">RUN</th>
+                        <th style="padding: 10px;">Nombre Completo</th>
+                        <th style="padding: 10px;">Correo</th>
+                        <th style="padding: 10px;">Rol</th>
+                        <th style="padding: 10px;">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 10px;">19011022K</td>
+                        <td style="padding: 10px;">Max Herrera</td>
+                        <td style="padding: 10px;">max@duoc.cl</td>
+                        <td style="padding: 10px;">Administrador</td>
+                        <td style="padding: 10px;"><button>Editar</button> <button>Eliminar</button></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;">201234567</td>
+                        <td style="padding: 10px;">Javiera Sanches</td>
+                        <td style="padding: 10px;">javi@gmail.com</td>
+                        <td style="padding: 10px;">Vendedor</td>
+                        <td style="padding: 10px;"><button>Editar</button> <button>Eliminar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+</body>
+</html>

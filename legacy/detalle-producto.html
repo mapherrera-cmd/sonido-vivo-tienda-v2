@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto - Sonido Vivo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><h1>Sonido Vivo</h1></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="productos.html">Productos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="carrito.html">🛒 Carrito</a>
+        </nav>
+    </header>
+
+    <main style="padding: 40px; max-width: 900px; margin: 0 auto;">
+        <div style="display: flex; gap: 40px; align-items: center; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <img src="../public/img/guitarra.jpg" alt="Guitarra Fender" style="max-width: 350px; width: 100%; border-radius: 8px;">
+            <div>
+                <h2>Guitarra Fender Stratocaster</h2>
+                <h3 style="color: #e74c3c; font-size: 24px;">$850.000</h3>
+                <p>Excelente guitarra eléctrica con acabado Sunburst. Equipada con cápsulas Single Coil tradicionales para obtener un tono cristalino y brillante.</p>
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" value="1" min="1" max="10" style="padding: 5px; width: 60px; margin-bottom: 20px;">
+                <br>
+                <button class="btn-agregar" style="padding: 12px 25px; font-size: 16px;">Añadir al Carrito</button>
+            </div>
+        </div>
+    </main>
+
+    <footer><p>Sonido Vivo - Viña del Mar</p></footer>
+    <script src="validaciones.js"></script>
+</body>
+</html>

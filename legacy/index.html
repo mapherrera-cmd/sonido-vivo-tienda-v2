@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonido Vivo - Tienda de Instrumentos</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- HEADER: Cabecera con el logo y navegación -->
+    <header>
+        <div class="logo">
+            <h1>Sonido Vivo</h1>
+        </div>
+        
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="productos.html">Productos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="carrito.html">Carrito (<span id="contador-carrito">0</span>)</a>
+        </nav>
+        
+        <div class="acceso-usuarios">
+            <a href="login.html">Iniciar sesión</a> | 
+            <a href="registro.html">Registrar usuario</a>
+        </div>
+    </header>
+
+    <!-- MAIN: Contenido principal de la página -->
+    <main>
+        <!-- BANNER PRINCIPAL -->
+        <section class="banner-principal">
+            <div class="texto-banner">
+                <h2>TU TIENDA DE MÚSICA EN VIÑA DEL MAR</h2>
+                <p>Encuentra las mejores guitarras, baterías, amplificadores y equipos de sonido. Stock actualizado y despacho a todo Chile.</p>
+                <a href="productos.html" class="btn-principal">Ver todos los productos</a>
+            </div>
+            <div class="imagen-banner">
+                <!-- Aquí está la imagen de tu tienda -->
+                <img src="../public/img/imagen-de-la-tienda.jpg" alt="Fachada de la tienda Sonido Vivo">
+            </div>
+        </section>
+
+        <!-- PRODUCTOS DESTACADOS -->
+        <section class="listado-productos">
+            <h3>Nuestros Equipos Destacados</h3>
+            
+            <div class="grilla-productos">
+                <!-- Producto 1: Guitarra -->
+                <article class="producto">
+                    <img src="../public/img/guitarra.jpg" alt="Guitarra Eléctrica Fender">
+                    <h4>Guitarra Fender Stratocaster</h4>
+                    <p class="atributos">Acabado Sunburst - Cápsulas Single Coil</p>
+                    <p class="precio">$850.000</p>
+                    <button 
+                        class="btn-agregar"
+                        data-nombre="Guitarra Fender Stratocaster"
+                        data-precio="850000">
+                        Añadir al carrito
+                    </button>
+                </article>
+
+                <!-- Producto 2: Amplificador -->
+                <article class="producto">
+                    <img src="../public/img/amplificador-15w.jpg" alt="Amplificador Cort 15W">
+                    <h4>Amplificador Cort 15W</h4>
+                    <p class="atributos">Ideal para práctica en casa - Ecualizador 3 bandas</p>
+                    <p class="precio">$85.000</p>
+                    <button 
+                        class="btn-agregar"
+                        data-nombre="Amplificador Cort 15W"
+                        data-precio="85000">
+                        Añadir al carrito
+                    </button>
+                </article>
+
+                <!-- Producto 3: Batería -->
+                <article class="producto">
+                    <img src="../public/img/bateria.jpg" alt="Batería Acustica Dixon">
+                    <h4>Batería Acústica Dixon</h4>
+                    <p class="atributos">5 piezas - Incluye atriles y platillos</p>
+                    <p class="precio">$450.000</p>
+                    <button 
+                    class="btn-agregar"
+                    data-nombre="Batería Acústica Dixon"
+                    data-precio="450000">
+                    Añadir al carrito
+                    </button>
+                </article>
+                
+                <!-- Producto 4: Pedal -->
+                <article class="producto">
+                    <img src="../public/img/pedal.jpg" alt="Pedal Boss Distortion DS-1">
+                    <h4>Pedal Boss Distortion DS-1</h4>
+                    <p class="atributos">Clásico pedal de distorsión análogo - Color Naranjo</p>
+                    <p class="precio">$65.000</p>
+                    <button 
+                    class="btn-agregar"
+                    data-nombre="Pedal Boss Distortion DS-1"
+                    data-precio="65000">
+                    Añadir al carrito
+                    </button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER: Pie de página -->
+    <footer>
+        <div class="footer-info">
+            <p><strong>Sonido Vivo - Viña del Mar</strong></p>
+            <p>Instrumentos musicales, audio e iluminación profesional.</p>
+        </div>
+        <div class="newsletter">
+            <label for="email">Únete a nuestro Newsletter:</label>
+            <input type="email" id="email" placeholder="Ingresa tu correo">
+            <button>Suscribirse</button>
+        </div>
+    </footer>
+    <script src="validaciones.js"></script>
+</body>
+<script src="validaciones.js"></script>
+</html> 

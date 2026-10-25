@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión | Sonido Vivo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">🎵 Sonido Vivo</div>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="blogs.html">Blog</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="carrito.html">🛒 Carrito</a>
+    </nav>
+    <div class="acciones">
+        <a href="login.html">Iniciar sesión</a>
+        <a href="registro.html">Registrarse</a>
+    </div>
+</header>
+
+<main>
+    <section class="contenedor-formulario">
+        <div class="caja-registro">
+            <h1>Iniciar Sesión</h1>
+            <p>Ingresa a tu cuenta para gestionar tus compras.</p>
+
+            <form id="form-login">
+                <!-- CORREO -->
+                <div class="grupo-input">
+                    <label for="login-correo">Correo electrónico</label>
+                    <input type="email" id="login-correo" placeholder="ejemplo@gmail.com" required>
+                    <span id="error-login-correo" class="mensaje-error"></span>
+                </div>
+
+                <!-- CONTRASEÑA -->
+                <div class="grupo-input">
+                    <label for="login-pass">Contraseña</label>
+                    <input type="password" id="login-pass" placeholder="Tu contraseña" minlength="4" maxlength="10" required>
+                    <span id="error-login-pass" class="mensaje-error"></span>
+                </div>
+
+                <!-- BOTÓN -->
+                <button type="submit" class="btn-formulario">Ingresar</button>
+
+                <p class="texto-formulario">
+                    ¿No tienes una cuenta? <a href="registro.html">Regístrate aquí</a>
+                </p>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div>
+        <h3>Sonido Vivo</h3>
+        <p>Tu tienda online de instrumentos musicales.</p>
+    </div>
+    <div>
+        <h3>Contacto</h3>
+        <p>contacto@sonidovivo.cl</p>
+        <p>Chile</p>
+    </div>
+    <div>
+        <h3>Enlaces</h3>
+        <a href="productos.html">Productos</a><br>
+        <a href="contacto.html">Contacto</a>
+    </div>
+    <p class="copyright">© 2026 Sonido Vivo</p>
+</footer>
+
+<!-- VINCULACIÓN AL JAVASCRIPT DE VALIDACIÓN -->
+<script src="validaciones.js"></script>
+</body>
+</html>
