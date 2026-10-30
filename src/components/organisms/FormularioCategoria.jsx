@@ -40,7 +40,7 @@ export function FormularioCategoria({ valoresIniciales, textoBoton, onSubmit }) 
         onChange={manejarCambio}
       />
       {valores.img && (
-        <img src={valores.img} alt="Vista previa" height="80" className="mb-3 rounded border" style={{ objectFit: "cover" }} />
+        <img src={valores.img} alt="Vista previa" height="80" className="img-contenida mb-3 rounded border" />
       )}
       <div>
         <Button type="submit">{textoBoton}</Button>

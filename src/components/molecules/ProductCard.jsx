@@ -8,7 +8,7 @@ export function ProductCard({ producto, onAdd }) {
 
   return (
     <Card className="h-100 shadow-sm">
-      <Card.Img variant="top" src={producto.img} alt={producto.nombre} style={{ height: "200px", objectFit: "cover" }} />
+      <Card.Img variant="top" src={producto.img} alt={producto.nombre} className="img-contenida p-2" style={{ height: "200px" }} />
       <Card.Body className="d-flex flex-column">
         <Card.Title>{producto.nombre}</Card.Title>
         <Card.Text className="text-muted small">{producto.descripcion}</Card.Text>

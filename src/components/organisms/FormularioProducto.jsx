@@ -108,7 +108,7 @@ export function FormularioProducto({ valoresIniciales, categorias, textoBoton, o
         <Col xs={12} md={6}>
           {/* Vista previa de la imagen elegida (solo se muestra si hay una) */}
           {valores.img && (
-            <img src={valores.img} alt="Vista previa" height="80" className="mb-3 rounded border" style={{ objectFit: "cover" }} />
+            <img src={valores.img} alt="Vista previa" height="80" className="img-contenida mb-3 rounded border" />
           )}
         </Col>
       </Row>

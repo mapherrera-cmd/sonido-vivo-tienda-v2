@@ -19,6 +19,14 @@ body {
   object-fit: cover;
 }
 
+/* Fotos de instrumentos: se ven completas y centradas dentro de su recuadro (sin recortar).
+   Las fotos tienen fondo blanco, por eso el recuadro también es blanco. */
+.img-contenida {
+  object-fit: contain;
+  object-position: center;
+  background: #fff;
+}
+
 /* Tarjeta de categoría clickeable */
 .tarjeta-categoria {
   transition: transform 0.15s;

@@ -30,7 +30,7 @@ export function AdminCategoriasPage() {
           {categorias.map((categoria) => (
             <tr key={categoria.id}>
               <td>
-                <img src={categoria.img} alt={categoria.nombre} width="60" height="45" style={{ objectFit: "cover" }} />
+                <img src={categoria.img} alt={categoria.nombre} width="60" height="45" className="img-contenida rounded border" />
               </td>
               <td>
                 {categoria.nombre}

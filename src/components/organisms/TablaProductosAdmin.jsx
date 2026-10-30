@@ -26,7 +26,7 @@ export function TablaProductosAdmin({ productos, categorias, onEliminar }) {
         {productos.map((producto) => (
           <tr key={producto.id}>
             <td>
-              <img src={producto.img} alt={producto.nombre} width="60" height="45" style={{ objectFit: "cover" }} />
+              <img src={producto.img} alt={producto.nombre} width="60" height="45" className="img-contenida rounded border" />
             </td>
             <td>
               {producto.nombre}

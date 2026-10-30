@@ -25,7 +25,7 @@ export function DetalleProductoPage() {
   return (
     <Row className="g-4">
       <Col md={6}>
-        <img src={producto.img} alt={producto.nombre} className="img-fluid rounded shadow-sm w-100" />
+        <img src={producto.img} alt={producto.nombre} className="img-contenida rounded shadow-sm w-100" style={{ maxHeight: "420px" }} />
       </Col>
       <Col md={6}>
         {categoria && (

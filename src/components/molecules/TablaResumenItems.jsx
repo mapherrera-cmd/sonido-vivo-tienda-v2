@@ -18,7 +18,7 @@ export function TablaResumenItems({ items, total, etiquetaTotal = "Total" }) {
         {items.map((item) => (
           <tr key={item.id}>
             <td>
-              <img src={item.img} alt={item.nombre} width="60" height="45" style={{ objectFit: "cover" }} />
+              <img src={item.img} alt={item.nombre} width="60" height="45" className="img-contenida rounded border" />
             </td>
             <td>{item.nombre}</td>
             <td>${item.precio.toLocaleString("es-CL")}</td>
